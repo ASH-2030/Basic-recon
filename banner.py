@@ -17,7 +17,7 @@ def grab_banner(ip, port):
         except Exception as e:
             print(f"[!] Error sending trigger: {e}")
 
-        # 4. Receive the banner (buffer size of 1024 bytes)
+        # 4. To receive the banner (buffer size of 1024 bytes)
         banner = s.recv(1024)
         
         print(f"[+] Banner received:\n{banner.decode().strip()}")
@@ -37,4 +37,5 @@ if __name__ == "__main__":
     target_ip = input("Enter Target IP: ")
     target_port = int(input("Enter Target Port: "))
     
+
     grab_banner(target_ip, target_port)
