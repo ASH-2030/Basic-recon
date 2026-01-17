@@ -4,7 +4,7 @@ def enumerate_dns(domain):
     print(f"\n[*] Enumerating DNS for: {domain}")
     print("-" * 40)
 
-    record_types = ['A', 'MX', 'NS','SOA','CNAME']
+    record_types = ['A', 'MX', 'NS','SOA','CNAME','AAAA', 'TXT']
 
     for record in record_types:
         print(f"\n[+] {record} Records:")
@@ -29,3 +29,4 @@ def enumerate_dns(domain):
 if __name__ == "__main__":
     target_domain = input("Enter Target Domain : ")
     enumerate_dns(target_domain)
+
